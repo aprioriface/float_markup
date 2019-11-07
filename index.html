@@ -20,7 +20,8 @@
         
         <main>
             <section class="main-plot plate">
-                <div class="main-plot-img"></div>
+                <video class="main-plot-img" src="./video/video.mp4" controls>
+                </video>
                 <h2 class="main-plot-title plate-title">About your product</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo at. Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo veniam incidunt in quam sapiente ut ipsum.</p>
                 <p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
@@ -36,6 +37,13 @@
                     <li><div class="pluses-plate-li-marker"></div><div class="pluses-plate-li-text">Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</div></li>
                     <li><div class="pluses-plate-li-marker"></div><div class="pluses-plate-li-text">Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</div></li>
                 </ul>
+            </section>
+            
+            <section class="video-plate plate">
+                <h2 class="video-plate-title plate-title">Amazing video</h2>
+                <video preload="auto" mute autoplay loop width="100%">
+                    <source src="./video/video.mp4" type='video/mp4' />
+                </video>
             </section>
 
             <section class="screenshots-plate plate">
@@ -141,8 +149,17 @@
         <footer class="contacts-plate plate">
             <h2 class="contacts-plate-title plate-title">Contacts</h2>
             <form action="#" class="contacts-plate-form">
-                <input name="name" type="text" class="contacts-plate-form-name" placeholder="Your name">
-                <input name="email" type="text" class="contacts-plate-form-email" placeholder="Your email">
+                <input name="name" type="text" class="contacts-plate-form-name" placeholder="Your name" list="names_list">
+                <datalist id="names_list">
+                    <option label="И.И. Иванов" value="Иванов Иван Иванович">
+                    <option label="С.С. Сидоров" value="Сидоров Сергей Сергеевич">
+                    <option label="П.П. Петров" value="Петров Петр Петрович">
+                    <option label="В.В, Васечкин" value="Васечкин Василий Васильевич">
+                </datalist>
+                <input name="email" type="email" class="contacts-plate-form-email" placeholder="Your email                                                           [address@mail.box]" pattern="^([A-Za-z\.-_]+)(@)([A-Za-z]+)(\.)([A-Za-z-]){2,}$" required>
+                <input name="phone" type="tel" class="contacts-plate-form-tel" placeholder="Your phone                                                           [+7(123)456-78-90]" pattern="^([0-9\(\)+-]+)$" required>
+                <input name="site" type="url" class="contacts-plate-form-site" placeholder="Your site                                                                      [http://your.site]" required>
+                <input name="birthdate" type="date" class="contacts-plate-form-birthdate" placeholder="Your birth date">
                 <textarea name="message" class="contacts-plate-form-message" placeholder="Your message"></textarea>
                 <input class="contacts-plate-form-submit" type="submit" value="Send">
             </form>
@@ -152,6 +169,16 @@
                 <p class="contacts-plate-item"><img src="./img/email_icon.png" alt="email-icon">psdhtmlcss@mail.ru</p>
                 <p class="contacts-plate-item"><img src="./img/phone_icon.png" alt="phone-icon">80 00 4568 55 55</p>
                 <img src="./img/social_buttons.png" alt="social-buttons">
+            </div>
+                
+            <div class="colortheme-plate">
+               <h4>Choose your color theme:</h4>
+                <input type="color" value="#445162">
+                <input type="color" value="#3d516c">
+                <input type="color" value="#345074">
+                <input type="color" value="#2c4f7d">
+                <input type="color" value="#234e85">
+                <input type="color" value="#1b4d8d">
             </div>
         </footer>
     </div>
